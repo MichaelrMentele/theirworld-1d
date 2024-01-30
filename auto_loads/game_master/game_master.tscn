@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctk0vpq3quscy"]
+
+[ext_resource type="Script" path="res://auto_loads/game_master/game_master.gd" id="1_e5s1g"]
+
+[node name="GameMaster" type="Node"]
+script = ExtResource("1_e5s1g")

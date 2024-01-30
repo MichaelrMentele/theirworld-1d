@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c03wbn01226m0"]
+
+[ext_resource type="Script" path="res://auto_loads/event_bus/event_bus.gd" id="1_o4dej"]
+
+[node name="EventBus" type="Node"]
+script = ExtResource("1_o4dej")
