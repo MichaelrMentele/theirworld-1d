@@ -1,0 +1,25 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="TheirWorld1D"
+run/main_scene="res://scenes/root.tscn"
+config/features=PackedStringArray("4.2", "Mobile")
+config/icon="res://icon.svg"
+
+[autoload]
+
+EventBus="*res://auto_loads/event_bus/event_bus.tscn"
+GameMaster="*res://auto_loads/game_master/game_master.tscn"
+
+[rendering]
+
+renderer/rendering_method="mobile"
