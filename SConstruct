@@ -12,12 +12,16 @@ env = SConscript("godot-cpp/SConstruct")
 # - CPPDEFINES are for pre-processor defines
 # - LINKFLAGS are for linking flags
 
-# tweak this if you want to use different folders, or more folders, to store your source code in.
+# Link the llama.cpp lib 
 env.Append(LIBPATH=["llama.cpp/"])
 env.Append(LIBS = ['llava'])
-env.Append(CPPPATH=["gdexts/", "llama.cpp/", "llama.cpp/common/"])
+env.Append(CPPPATH=["llama.cpp/", "llama.cpp/common/"])
+
+# Add Extension files
+env.Append(CPPPATH=["gdexts/"])
 sources = Glob("gdexts/*.cpp")
 
+# Build shareable libraries for above extensions
 if env["platform"] == "macos":
     library = env.SharedLibrary(
         "project/bin/libgdexample.{}.{}.framework/libgdexample.{}.{}".format(
